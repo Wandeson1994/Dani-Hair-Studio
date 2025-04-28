@@ -1,0 +1,718 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cascadia Code", sans-serif;
+    background-color: #c7c7c7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: rgb(112, 40, 125);
+}
+
+.logo {
+    margin-left: 10%;
+    margin-top: -10px;
+}
+
+.logo img {
+    width: 30px;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+    margin-left: 42%;
+    margin-top: 10%;
+}
+
+.logo h1 {
+    font-family: 'Playwrite RO', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(206, 175, 212);
+}
+
+header ul {
+    display: flex;
+    gap: 100px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10%;
+}
+
+header li {
+    list-style: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+header li:hover {
+    border-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #ddd
+}
+
+header a:hover {
+    color: black;
+}
+
+.principal {
+    background-image: url(./img/dani-studio.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    height: 100vh;
+}
+
+.secao {
+    height: 100vh;
+}
+
+.titulo-sobre{
+    font-size: 40px;
+    font-weight: 600;
+    margin-left: 30px;
+    text-decoration: underline rgb(112, 40, 125);
+}
+
+.sobre-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.sobre p{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.sobre img {
+    width: 350px;
+    border-radius: 50%;
+    margin-top: -35px;
+    box-shadow: 0 0 25px rgba(116, 27, 123, 0.8);
+}
+
+.sobre-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: -40px;
+}
+
+.sobre-text h3 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.sobre-text p {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.sobre-text ul {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.sobre-text li {
+    margin-top: 10px;
+}
+
+.sobre-text li span {
+    font-weight: 600;
+}
+
+.sobre-text h4 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.titulo-servicos {
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: underline rgb(112, 40, 125);
+}
+
+.grade-servicos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.servico {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    border: none;
+    padding: 20px;
+    margin: 0;
+    margin-top: 0;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    backdrop-filter: blur(5px);
+    background-color: rgb(255,192,203);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.servico.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes carousel {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    5%, 25% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    30%, 100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+.servico:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(95, 26, 104, 0.5);
+}
+
+
+.beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.tipo-servico {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.beneficios p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.beneficios ol{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.beneficios ul {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.beneficios li{
+    margin-top: 10px;
+}
+
+.beneficios li span{
+    font-weight: 600;
+}
+
+.servico img {
+    width: 450px;
+    height: 450px;
+    border-radius: 25px;
+    margin-top: 15px;
+}
+
+.servico p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* Botões de navegação do carrossel */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    gap: 20px;
+}
+
+.carousel-controls button {
+    background-color: rgb(112, 40, 125);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-controls button:hover {
+    background-color: rgb(96, 30, 124);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-controls button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 10%;
+    text-decoration: underline rgb(112, 40, 125);
+}
+
+.contato p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5%;
+}
+
+.botoes-contato {
+    display: flex;
+    gap: 30px;
+    margin-top: 5%;
+}
+
+.botoes-contato a {
+    text-decoration: none;
+    color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(112, 40, 125);
+}
+
+.botoes-contato a:hover {
+    background-color: rgb(96, 30, 124);
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background-color: white;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+footer {
+    margin-top: -90px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #161616;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-active .nav-menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-active .menu-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-active .menu-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-active .menu-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1024px) {
+    header ul {
+        gap: 50px;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    .sobre-text {
+        width: 80%;
+        margin-top: 20px;
+    }
+
+    .grade-servicos {
+        width: 90%;
+        height: 650px;
+    }
+
+    .servico {
+        flex-direction: column;
+    }
+
+    .servico img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        height: auto;
+    }
+
+    .logo {
+        margin-left: 5%;
+    }
+
+    header ul {
+        gap: 20px;
+        font-size: 16px;
+        margin-right: 5%;
+    }
+
+    .principal {
+        background-position: 78% center;
+    }
+
+    .titulo-sobre, .titulo-servicos {
+        font-size: 35px;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .sobre-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .sobre-text {
+        width: 90%;
+    }
+
+    .sobre-text p {
+        font-size: 20px;
+    }
+
+    .sobre img {
+        width: 250px;
+    }
+
+    .grade-servicos {
+        width: 95%;
+        height: 550px;
+    }
+
+    .servico {
+        padding: 10px;
+    }
+
+    .servico img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .beneficios {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .contato h2 {
+        font-size: 35px;
+    }
+
+    .contato p {
+        font-size: 18px;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .botoes-contato {
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-right: 5%;
+    }
+
+    header ul {
+        position: fixed;
+        flex-direction: column;
+        background-color: rgba(112, 40, 125, 0.95);
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        z-index: 5;
+        padding-top: 80px;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        margin-right: 0;
+        gap: 30px;
+        align-items: center;
+    }
+
+    header li {
+        width: 80%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carousel-controls button {
+        min-height: 44px;
+        min-width: 80px;
+    }
+
+    .botoes-contato a {
+        display: block;
+        padding: 15px 20px;
+        margin: 5px 0;
+    }
+
+    .indicator {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        margin-left: 0;
+    }
+
+    header ul {
+        margin-right: 0;
+        gap: 15px;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .principal {
+        margin-top: 120px;
+    }
+
+    .secao {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .titulo-sobre, .titulo-servicos {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .sobre-content {
+        margin-top: 20px;
+    }
+
+    .sobre-text p {
+        font-size: 16px;
+    }
+
+    .sobre-text h3 {
+        font-size: 20px;
+    }
+
+    .sobre-text ul, .sobre-text h4 {
+        font-size: 16px;
+    }
+
+    .grade-servicos {
+        height: 500px;
+    }
+
+    .servico img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tipo-servico h3 {
+        font-size: 20px;
+    }
+
+    .beneficios p, .beneficios ul, .beneficios ol {
+        font-size: 14px;
+    }
+
+    .contato h2 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .contato p {
+        font-size: 16px;
+    }
+
+    .botoes-contato {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+
+    .botoes-contato a {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .carousel-controls button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    header ul {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .titulo-sobre, .titulo-servicos {
+        font-size: 24px;
+    }
+
+    .sobre img {
+        width: 180px;
+    }
+
+    .grade-servicos {
+        height: 450px;
+    }
+
+    .servico img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .secao {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    .footer-content {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
