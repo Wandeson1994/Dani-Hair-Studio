@@ -489,7 +489,7 @@ footer {
     }
 
     .sobre img {
-        width: 250px;
+        width: 200px;
     }
 
     .grade-servicos {
@@ -558,6 +558,7 @@ footer {
     .carousel-controls button {
         min-height: 44px;
         min-width: 80px;
+        margin-top: 15px;
     }
 
     .botoes-contato a {
