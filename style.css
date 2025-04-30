@@ -490,6 +490,7 @@ footer {
 
     .sobre img {
         width: 200px;
+        margin-top: 10px;
     }
 
     .grade-servicos {
@@ -523,6 +524,7 @@ footer {
 
     .botoes-contato {
         gap: 15px;
+        margin-top: 15px;
     }
 
     .menu-toggle {
