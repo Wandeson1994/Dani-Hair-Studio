@@ -500,7 +500,6 @@ footer {
 
     .servico {
         padding: 10px;
-        height: 90%
     }
 
     .servico img {
@@ -525,7 +524,7 @@ footer {
 
     .botoes-contato {
         gap: 15px;
-        margin-top: 15px;
+        margin-top: 25px;
     }
 
     .menu-toggle {
