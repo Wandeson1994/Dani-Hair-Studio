@@ -496,6 +496,7 @@ footer {
     .grade-servicos {
         width: 95%;
         height: 600px;
+        padding: 0 0 20px;
     }
 
     .servico {
@@ -632,6 +633,7 @@ footer {
 
     .grade-servicos {
         height: 500px;
+        padding: 0 0 20px;
     }
 
     .servico {
