@@ -561,7 +561,7 @@ footer {
     .carousel-controls button {
         min-height: 44px;
         min-width: 80px;
-        margin-top: 15px;
+        padding: 20px;
     }
 
     .botoes-contato a {
@@ -675,7 +675,7 @@ footer {
     }
 
     .carousel-controls button {
-        padding: 8px 15px;
+        padding: 15px;
         font-size: 14px;
     }
 }
