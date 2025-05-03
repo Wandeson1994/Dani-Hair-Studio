@@ -634,6 +634,10 @@ footer {
         height: 500px;
     }
 
+    .servico {
+        padding: 5px 0 20px;
+    }
+
     .servico img {
         width: 200px;
         height: 200px;
